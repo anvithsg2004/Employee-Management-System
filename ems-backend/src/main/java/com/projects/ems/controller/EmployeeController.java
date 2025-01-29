@@ -39,7 +39,7 @@ public class EmployeeController {
     }
 
     //Update Employee
-    @PostMapping("/updateEmployee/{id}")
+    @PutMapping("/updateEmployee/{id}")
     public ResponseEntity<EmployeeDTO> updateEmployee(@PathVariable("id") Long employeeId,
                                                       @RequestBody EmployeeDTO employeeDTO) {
         EmployeeDTO employeeDTO1 = employeeService.updateEmployee(employeeId, employeeDTO);
